@@ -67,3 +67,56 @@ A demand function is created using:
 - Special day
 - Vehicle type
 
+
+# Architecture Diagram
+
+```mermaid
+flowchart TD
+    A["CSV Dataset"] --> B["Pathway Data Ingestion"]
+    B --> C["Feature Engineering & Preprocessing"]
+    C --> D1["Module 1: Linear Pricing Model"]
+    C --> D2["Module 2: Demand Based Pricing Model"]
+    D1 --> E["Price Stream"]
+    D2 --> E
+    E --> F["Bokeh Visualization"]
+```
+
+
+
+
+# Project Architecture & Workflow
+
+The dynamic pricing system is designed to process real time parking lot data and update prices using two pricing models. Here's how it works:
+
+1. **CSV Dataset**  
+   The raw data simulates parking lot conditions across 14 lots, including features like occupancy, queue length, vehicle type, traffic level, and more. This serves as the input for the system.
+
+2. **Pathway Data Ingestion**  
+   Pathway is used to simulate streaming by ingesting data row-by-row in timestamp order. This preserves the structure needed for realtime pricing updates.
+
+3. **Feature Engineering & Preprocessing**  
+   - Extract relevant features (e.g., occupancy rate = occupancy / capacity)(for Module-1).
+   - Normalize or scale inputs like queue length and traffic (for Module-2).
+   - Handle missing or noisy data where applicable.
+
+4. **Module 1: Linear Pricing Model**  
+   A simple pricing model where price increases linearly with occupancy.  
+   Formula:  
+   `Priceₜ₊₁ = Priceₜ + α × (Occupancy / Capacity)`
+
+5. **Module 2: Demand-Based Pricing Model**  
+   A more enhanced model that calculates a demand score using multiple features (occupancy, queue, traffic, etc.) and adjusts price accordingly.  
+   Formula:  
+   `Priceₜ = BasePrice × (1 + λ × NormalizedDemand)`
+
+6. **Price Stream**  
+   The output from the model is emitted in real-time for each parking slot and timestamp. Pathway handles the continuous flow of this data.
+
+7. **Bokeh Visualization**  
+   Real-time line charts plot the price evolution for each slot using Bokeh. These charts help visualize and validate the smoothness and correctness of price changes.
+
+---
+
+This workflow ensures that the pricing system is data-driven, time varying, and transparent.
+
+
