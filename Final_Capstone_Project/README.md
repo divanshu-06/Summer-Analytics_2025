@@ -102,12 +102,12 @@ The dynamic pricing system is designed to process real time parking lot data and
 4. **Module 1: Linear Pricing Model**  
    A simple pricing model where price increases linearly with occupancy.  
    Formula:  
-   `Priceₜ₊₁ = Priceₜ + α × (Occupancy / Capacity)`
+   `Priceₜ₊₁=Priceₜ+ α ×(Occupancy/Capacity)`
 
-5. **Module 2: Demand-Based Pricing Model**  
+5. **Module 2: Demand Based Pricing Model**  
    A more enhanced model that calculates a demand score using multiple features (occupancy, queue, traffic, etc.) and adjusts price accordingly.  
    Formula:  
-   `Priceₜ = BasePrice × (1 + λ × NormalizedDemand)`
+   `Priceₜ=BasePrice×(1+ λ ×NormalizedDemand)`
 
 6. **Price Stream**  
    The output from the model is emitted in real-time for each parking slot and timestamp. Pathway handles the continuous flow of this data.
