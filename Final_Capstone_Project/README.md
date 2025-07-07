@@ -1,7 +1,7 @@
 # Dynamic Pricing for Urban Parking Lots
 
-Capstone Project – **Summer Analytics 2025**
-Hosted by: Consulting & Analytics Club and Pathway
+- Capstone Project – **Summer Analytics 2025**
+- Hosted by: Consulting & Analytics Club and Pathway
 
 # Problem Statement
 
