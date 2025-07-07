@@ -51,7 +51,7 @@ The objective is to:
 
 
 
-## 🧠 Modules Implemented
+# Modules Implemented
 
 # Module 1: Baseline Linear Model
 - Price is updated linearly with occupancy:
