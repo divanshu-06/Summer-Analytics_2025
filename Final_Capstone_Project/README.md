@@ -113,7 +113,7 @@ The dynamic pricing system is designed to process real time parking lot data and
    The output from the model is emitted in real-time for each parking slot and timestamp. Pathway handles the continuous flow of this data.
 
 7. **Bokeh Visualization**  
-   Real-time line charts plot the price evolution for each slot using Bokeh. These charts help visualize and validate the smoothness and correctness of price changes.
+   Real-time line charts plot the price evolution for each slot using Bokeh. These charts help visualize the price changes.
 
 ---
 
