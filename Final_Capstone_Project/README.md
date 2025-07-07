@@ -117,6 +117,11 @@ The dynamic pricing system is designed to process real time parking lot data and
 
 ---
 
-This workflow ensures that the pricing system is data-driven, time varying, and transparent.
+- This workflow ensures that the pricing system is data-driven, time varying, and transparent.
+- I have also added the pdf files of both the plots if you want to hover over the plots then you need to run the code using the given data.
+  
+  - [Module 1 Price Plots](Module%201_price_plots.pdf)  
+  - [Module 2 Price Plots](Module%202_price_plots.pdf)
+
 
 
